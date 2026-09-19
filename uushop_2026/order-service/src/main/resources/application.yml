@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/uushop?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: your_mysql_password
+  application:
+    name: order-service
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/test/mapper/xml/*.xml
+
+rocketmq:
+  name-server: localhost:8908   # 你的 Docker NameServer 端口
+  producer:
+    group: order   # 生产者组名
+
+debug: true
+logging:
+  level:
+    com.test: debug
+    org.springframework: debug
+    org.mybatis: debug

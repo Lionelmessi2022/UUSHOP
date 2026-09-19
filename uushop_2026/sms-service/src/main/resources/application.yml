@@ -1,0 +1,13 @@
+server:
+  port: 8083
+ihuyi:
+  account: your_ihuyi_account
+  password: your_ihuyi_password
+  sign: 【达信通】
+spring:
+  application:
+    name: sms-service
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
